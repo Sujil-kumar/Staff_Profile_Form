@@ -16,10 +16,18 @@ const StaffPreview = ({formData,handleClose}) => {
                     />
                     <h5 className='mt-3'>{formData.firstName} {formData.lastName}</h5>
                     <div className='d-flex justify-content-center gap-2'>
-                        <i className="bi bi-facebook text-primary"></i>
-                        <i className="bi bi-linkedin text-primary"></i>
+                        <a href={formData.facebook}>
+                            <i className="bi bi-facebook text-primary"></i>
+                        </a>
+                        <a href={formData.linkedIn}>
+                            <i className="bi bi-linkedin text-primary"></i>
+                        </a>
+                        <a href={formData.skype}>
                         <i className="bi bi-skype text-primary"></i>
-                        <i className="bi bi-envelope text-primary"></i>
+                        </a>
+                        <a href={`mailto:${formData.email}`}>
+                            <i className="bi bi-envelope text-primary"></i>
+                        </a>
                     </div>
 
                     <div className="text-start mt-3">
